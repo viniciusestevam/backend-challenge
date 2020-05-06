@@ -1,8 +1,8 @@
 import { ApolloServer } from 'apollo-server';
 
-import { typeDefs } from '../../src/app/planet/typeDefs';
-import { resolvers } from '../../src/app/planet/resolvers';
-import { IAPIResponse } from '../../src/app/planet/dataSource/types';
+import { typeDefs } from '../../src/app/typeDefs';
+import { resolvers } from '../../src/app/resolvers';
+import { IAPIResponse } from '../../src/app/dataSource/types';
 
 export function getApolloServer(dataSources: any): ApolloServer {
   return new ApolloServer({

@@ -1,4 +1,4 @@
-import { Resolvers } from '../../types/graphql';
+import { Resolvers } from '../types/graphql';
 import { IPlanet } from './types/planet';
 
 import PlanetService from './service/planetService';

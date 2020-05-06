@@ -3,7 +3,7 @@ import { getApolloServer, mockSuitablePlanets } from './utils';
 
 import { PLANETS, SUITABLE_PLANETS } from './utils/calls';
 
-import PlanetAPI from '../src/app/planet/dataSource/planet.api';
+import PlanetAPI from '../src/app/dataSource/planet.api';
 
 describe('Planet module', () => {
   test('When querying planets, should return valid array of planets', async () => {
