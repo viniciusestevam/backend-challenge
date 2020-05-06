@@ -4,10 +4,11 @@ import { typeDefs } from '../../src/app/typeDefs';
 import { resolvers } from '../../src/app/resolvers';
 import { IAPIResponse } from '../../src/app/dataSource/types';
 
-export function getApolloServer(dataSources: any): ApolloServer {
+export function getApolloServer(dataSources: any, context?: any): ApolloServer {
   return new ApolloServer({
     typeDefs,
     resolvers,
+    context,
     dataSources: () => ({ ...dataSources }),
   });
 }

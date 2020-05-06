@@ -15,3 +15,12 @@ export const SUITABLE_PLANETS = `
     }
   }
 `;
+
+export const INSTALL_STATION = `
+  mutation InstallStation($planetName: String!) {
+    installStation(planetName: $planetName) {
+      id,
+      planetName
+    }
+  }
+`;
