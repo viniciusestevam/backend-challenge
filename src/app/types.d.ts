@@ -1,6 +1,7 @@
 export interface IPlanet {
   name: string;
   mass: number | null;
+  hasStation: boolean;
 }
 
 export interface IStation {

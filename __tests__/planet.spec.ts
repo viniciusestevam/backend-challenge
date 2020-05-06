@@ -4,11 +4,18 @@ import { getApolloServer, mockSuitablePlanets } from './utils';
 import { PLANETS, SUITABLE_PLANETS } from './utils/calls';
 
 import PlanetAPI from '../src/app/dataSource/planet.api';
+import { PrismaClient } from '@prisma/client';
+
+const client = new PrismaClient();
+
+afterAll(async () => {
+  client.disconnect();
+});
 
 describe('Planet module', () => {
   test('When querying planets, should return valid array of planets', async () => {
     const planet = new PlanetAPI({ baseURL: 'https://api.arcsecond.io' });
-    const server = getApolloServer({ planet });
+    const server = getApolloServer({ planet }, { prisma: client });
 
     const { query } = createTestClient(server);
 
@@ -18,7 +25,7 @@ describe('Planet module', () => {
 
   test('When provided planets, should return only the suitables (mass > 25)', async () => {
     const planet = new PlanetAPI({ baseURL: 'https://api.arcsecond.io' });
-    const server = getApolloServer({ planet });
+    const server = getApolloServer({ planet }, { prisma: client });
 
     const { query } = createTestClient(server);
     planet.planets = jest.fn(async () => mockSuitablePlanets);

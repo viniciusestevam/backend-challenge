@@ -20,14 +20,13 @@ describe('Station module', () => {
 
     await mutate({
       mutation: INSTALL_STATION,
-      variables: { planetName: 'test' },
+      variables: { planetName: 'test1' },
     });
 
     const second = await mutate({
       mutation: INSTALL_STATION,
-      variables: { planetName: 'test' },
+      variables: { planetName: 'test2' },
     });
-
     expect(second.data!.installStation.id).toBe(2);
   });
 });
