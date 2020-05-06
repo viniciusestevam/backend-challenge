@@ -1,5 +1,5 @@
 import { IAPIResponsePlanet } from '../dataSource/types';
-import { IPlanet } from '../types/planet';
+import { IPlanet } from '../types';
 
 import PlanetAPI from '../dataSource/planet.api';
 
