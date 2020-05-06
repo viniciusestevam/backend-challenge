@@ -1,11 +1,12 @@
 import { gql } from 'apollo-server';
 
 export const typeDefs = gql`
-  type Setup {
+  type Planet {
     name: String!
+    mass: Float
   }
 
   type Query {
-    setup: [Setup!]
+    planets: [Planet!]
   }
 `;

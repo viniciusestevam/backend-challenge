@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server';
-import { typeDefs } from './typeDefs';
-import { resolvers } from './resolvers';
+import { typeDefs } from './app/planet/typeDefs';
+import { resolvers } from './app/planet/resolvers';
 import { DataSources } from './types/graphql';
 import PlanetAPI from './app/planet/dataSource/planet.api';
 
