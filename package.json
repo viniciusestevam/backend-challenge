@@ -6,7 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
+    "postinstall": "npm run generate",
+    "generate": "prisma generate",
+    "db:migrate": "prisma migrate save -c --name \"\" --experimental && prisma migrate up --experimental"
   },
   "devDependencies": {
     "@prisma/cli": "^2.0.0-beta.4",
