@@ -1,6 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testMatch: ['**/__tests__/**/*.+(ts)'],
-  collectCoverageFrom: ['src/app/**/*.ts', '!**/node_modules/**'],
+  testMatch: ['**/?(*.)+(spec|test).[t]s?(x)'],
+  testPathIgnorePatterns: ['/node_modules/', '__tests__/utils/'],
+  collectCoverageFrom: ['src/app/**/*.ts'],
 };
