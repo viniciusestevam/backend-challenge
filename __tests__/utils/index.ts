@@ -2,7 +2,7 @@ import { ApolloServer } from 'apollo-server';
 
 import { typeDefs } from '../../src/app/typeDefs';
 import { resolvers } from '../../src/app/resolvers';
-import { IAPIResponse } from '../../src/app/dataSource/types';
+import { IPlanetAPIResponse } from '../../src/app/dataSource/types';
 
 export function getApolloServer(dataSources: any, context?: any): ApolloServer {
   return new ApolloServer({
@@ -13,7 +13,7 @@ export function getApolloServer(dataSources: any, context?: any): ApolloServer {
   });
 }
 
-export const mockSuitablePlanets: IAPIResponse = {
+export const mockSuitablePlanets: IPlanetAPIResponse = {
   count: 0,
   next: '',
   previous: '',
