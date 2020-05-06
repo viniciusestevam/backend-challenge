@@ -9,5 +9,9 @@ export const resolvers: Resolvers = {
       const service = new PlanetService(dataSources.planet);
       return await service.planets();
     },
+    suitablePlanets: async (_, __, { dataSources }): Promise<IPlanet[]> => {
+      const service = new PlanetService(dataSources.planet);
+      return await service.suitablePlanets();
+    },
   },
 };

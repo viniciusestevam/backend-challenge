@@ -6,3 +6,12 @@ export const PLANETS = `
     }
   }
 `;
+
+export const SUITABLE_PLANETS = `
+  query {
+    suitablePlanets {
+      name,
+      mass
+    }
+  }
+`;

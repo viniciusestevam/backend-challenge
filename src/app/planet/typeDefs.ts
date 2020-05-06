@@ -8,5 +8,6 @@ export const typeDefs = gql`
 
   type Query {
     planets: [Planet!]
+    suitablePlanets: [Planet!]
   }
 `;
