@@ -34,7 +34,7 @@ export default class PlanetService {
     };
   }
 
-  async hasStation(planetName: string): Promise<boolean> {
+  private async hasStation(planetName: string): Promise<boolean> {
     return (await this.repository.station.findMany({ where: { planetName } })).length > 0;
   }
 }
