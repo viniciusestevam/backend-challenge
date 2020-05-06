@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.5",
+    "apollo-server-testing": "^2.13.0",
     "jest": "^25.0.0",
     "ts-jest": "^25.4.0",
     "ts-node": "^8.10.1",
