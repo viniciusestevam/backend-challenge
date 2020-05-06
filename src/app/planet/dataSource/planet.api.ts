@@ -1,15 +1,8 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { IPlanet } from '../types/planet';
+import { IAPIResponse } from './types';
 
 interface ConstructorProps {
   baseURL: string;
-}
-
-export interface IArcsecondResponse {
-  count: number;
-  next: string;
-  previous: string;
-  results: IPlanet[];
 }
 
 export default class PlanetAPI extends RESTDataSource {
@@ -18,7 +11,7 @@ export default class PlanetAPI extends RESTDataSource {
     this.baseURL = baseURL;
   }
 
-  async planets(page = 1): Promise<IArcsecondResponse> {
+  async planets(page = 1): Promise<IAPIResponse> {
     return this.get(`exoplanets?page=${page}`);
   }
 }

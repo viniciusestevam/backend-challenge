@@ -1,4 +1,4 @@
 export interface IPlanet {
   name: string;
-  mass: number;
+  mass: number | null;
 }
