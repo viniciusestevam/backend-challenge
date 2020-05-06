@@ -18,4 +18,5 @@ interface ResolverMap {
 
 interface Resolvers extends IResolvers {
   Query: ResolverMap;
+  Mutation: ResolverMap;
 }
