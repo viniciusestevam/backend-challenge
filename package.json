@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.4",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.5",
     "apollo-server-testing": "^2.13.0",
