@@ -7,11 +7,11 @@ export const resolvers: Resolvers = {
   Query: {
     planets: async (_, __, { dataSources }): Promise<IPlanet[]> => {
       const service = new PlanetService(dataSources.planet);
-      return await service.planets();
+      return service.planets();
     },
     suitablePlanets: async (_, __, { dataSources }): Promise<IPlanet[]> => {
       const service = new PlanetService(dataSources.planet);
-      return await service.suitablePlanets();
+      return service.suitablePlanets();
     },
   },
 };
