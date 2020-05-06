@@ -1,0 +1,14 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Station {
+  id         Int      @default(autoincrement()) @id
+  planetName String
+  createdAt  DateTime @default(now())
+}
