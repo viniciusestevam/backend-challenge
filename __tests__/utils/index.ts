@@ -13,7 +13,7 @@ export function getApolloServer(dataSources: any, context?: any): ApolloServer {
   });
 }
 
-export const mockSuitablePlanets: IPlanetAPIResponse = {
+export const mockPlanets: IPlanetAPIResponse = {
   count: 0,
   next: '',
   previous: '',

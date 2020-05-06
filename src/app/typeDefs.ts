@@ -14,8 +14,8 @@ export const typeDefs = gql`
   }
 
   type Query {
-    planets: [Planet!]
-    suitablePlanets: [Planet!]
+    planets(pages: Int): [Planet!]
+    suitablePlanets(pages: Int): [Planet!]
   }
 
   type Mutation {
