@@ -5,6 +5,7 @@
   "author": "estevam31 <estevamvinicius31@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "ts-node src/server.ts",
     "test": "jest"
   },
   "devDependencies": {
@@ -14,5 +15,9 @@
     "ts-jest": "^25.4.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "apollo-server": "^2.13.0",
+    "graphql": "^15.0.0"
   }
 }
