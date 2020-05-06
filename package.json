@@ -1,0 +1,24 @@
+{
+  "name": "voltbras",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "estevam31 <estevamvinicius31@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "apollo-server-testing": "^2.13.0",
+    "jest": "^25.0.0",
+    "ts-jest": "^25.4.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "apollo-server": "^2.13.0",
+    "graphql": "^15.0.0"
+  }
+}
