@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    container_name: backend_challenge
+    restart: always
+    build: .
+    ports:
+      - 3000:3000
+    links:
+      - backend_challenge_db
+    depends_on:
+      - backend_challenge_db
+  backend_challenge_db:
+    image: postgres:9.5-alpine
+    restart: always
+    container_name: backend_challenge_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./resources/init.sh:/docker-entrypoint-initdb.d/init.sh

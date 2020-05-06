@@ -8,6 +8,10 @@ import { PrismaClient } from '@prisma/client';
 
 const client = new PrismaClient();
 
+beforeAll(() => {
+  jest.setTimeout(20000);
+});
+
 afterAll(async () => {
   client.disconnect();
 });
