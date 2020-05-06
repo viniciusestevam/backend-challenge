@@ -1,11 +1,11 @@
-export interface IAPIResponsePlanet {
+export interface IPlanetAPIResponsePlanet {
   name: string;
   mass: { value: number; unit: string };
 }
 
-export interface IAPIResponse {
+export interface IPlanetAPIResponse {
   count: number;
   next: string;
   previous: string;
-  results: IAPIResponsePlanet[];
+  results: IPlanetAPIResponsePlanet[];
 }

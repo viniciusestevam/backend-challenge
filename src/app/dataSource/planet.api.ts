@@ -1,5 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { IAPIResponse } from './types';
+import { IPlanetAPIResponse } from './types';
 
 interface ConstructorProps {
   baseURL: string;
@@ -11,7 +11,7 @@ export default class PlanetAPI extends RESTDataSource {
     this.baseURL = baseURL;
   }
 
-  async planets(page = 1): Promise<IAPIResponse> {
+  async planets(page = 1): Promise<IPlanetAPIResponse> {
     return this.get(`exoplanets?page=${page}`);
   }
 }

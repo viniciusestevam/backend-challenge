@@ -1,4 +1,4 @@
-import { IAPIResponsePlanet } from '../dataSource/types';
+import { IPlanetAPIResponsePlanet } from '../dataSource/types';
 import { IPlanet } from '../types';
 
 import PlanetAPI from '../dataSource/planet.api';
@@ -10,9 +10,7 @@ export default class PlanetService {
   async planets(): Promise<IPlanet[]> {
     const dataSourceResponse = await this.dataSource.planets();
     return await Promise.all(
-      dataSourceResponse.results.map(responsePlanet =>
-        this.mapPlanetResponse(responsePlanet)
-      )
+      dataSourceResponse.results.map(responsePlanet => this.mapPlanetResponse(responsePlanet))
     );
   }
 
@@ -25,7 +23,7 @@ export default class PlanetService {
     return planet.mass! > 25;
   }
 
-  private async mapPlanetResponse(responsePlanet: IAPIResponsePlanet): Promise<IPlanet> {
+  private async mapPlanetResponse(responsePlanet: IPlanetAPIResponsePlanet): Promise<IPlanet> {
     const hasStation = await this.hasStation(responsePlanet.name);
     return {
       name: responsePlanet.name,
