@@ -6,13 +6,13 @@ import StationService from './service/stationService';
 
 export const resolvers: Resolvers = {
   Query: {
-    planets: async (_, __, { dataSources: { planet }, prisma }): Promise<IPlanet[]> => {
+    planets: async (_, { pages }, { dataSources: { planet }, prisma }): Promise<IPlanet[]> => {
       const service = new PlanetService(planet, prisma);
-      return service.planets();
+      return service.planets(pages);
     },
-    suitablePlanets: async (_, __, { dataSources: { planet }, prisma }): Promise<IPlanet[]> => {
+    suitablePlanets: async (_, { pages }, { dataSources: { planet }, prisma }): Promise<IPlanet[]> => {
       const service = new PlanetService(planet, prisma);
-      return service.suitablePlanets();
+      return service.suitablePlanets(pages);
     },
   },
 

@@ -11,7 +11,7 @@ export default class PlanetAPI extends RESTDataSource {
     this.baseURL = baseURL;
   }
 
-  async planets(page = 1): Promise<IPlanetAPIResponse> {
+  async planets(page: number): Promise<IPlanetAPIResponse> {
     return this.get(`exoplanets?page=${page}`);
   }
 }
