@@ -6,8 +6,8 @@ services:
     build: .
     ports:
       - 3000:3000
-    links:
-      - backend_challenge_db
+    # desde a versão 3 não é necessário usar o links
+    # já vem por default
     depends_on:
       - backend_challenge_db
   backend_challenge_db:

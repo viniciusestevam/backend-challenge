@@ -40,6 +40,6 @@ Verifique-se de ter as últimas versões do [Docker](https://www.docker.com/) e 
 
 ## Melhorias a se fazer
 
-- **Error handling:** Melhorar o tratamento de erros facilitando a vida de um client GraphQL que implemente essa API utilizando a sintaxe `... on Error`: https://youtu.be/A5-H6MtTvqk
+- **Error handling:** Melhorar o tratamento de erros facilitando a vida de um client GraphQL que implemente essa API utilizando a sintaxe `... on Error`: https://youtu.be/A5-H6MtTvqk (legal! não sabia desse jeito pra handlear os erros)
 - **Prisma**: Rodar as migrations dentro do container, assim que a issue citada for corrigida.
 - **pages?**: Um nome que deixe mais claro que o arg `pages` se define ao número de páginas buscadas na api do arcsecond, e nao que a busca nessa api será paginada

@@ -1,6 +1,9 @@
 export interface IPlanet {
   name: string;
-  mass: number | null;
+  // podemos utilizar undefined em vez de null também
+  // assim, conseguimos utilizar melhor o syntax
+  // sugar que o Typescript têm(planetService:48)
+  mass?: number;
   hasStation: boolean;
 }
 
