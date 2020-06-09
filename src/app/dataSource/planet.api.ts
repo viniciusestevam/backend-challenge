@@ -11,7 +11,10 @@ export default class PlanetAPI extends RESTDataSource {
     this.baseURL = baseURL;
   }
 
-  async planets(page: number): Promise<IPlanetAPIResponse> {
-    return this.get(`exoplanets?page=${page}`);
+  // como não usa await, dá de tirar o async
+  planets(page: number) {
+    // podemos tipar a chamada do método também,
+    // mas da forma que fizesse é igualmente justa
+    return this.get<IPlanetAPIResponse>(`exoplanets?page=${page}`);
   }
 }

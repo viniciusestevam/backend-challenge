@@ -4,7 +4,7 @@ export const typeDefs = gql`
   type Planet {
     name: String!
     mass: Float
-    hasStation: Boolean
+    hasStation: Boolean # hasStation é opcional?
   }
 
   type Station {
